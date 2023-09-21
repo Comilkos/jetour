@@ -1,0 +1,28 @@
+* {
+    font-family: Arial;
+}
+
+.container {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    height: 120px;
+}
+
+.logo {
+    
+}
+
+.logoKAN {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.vertical-line {
+    width: 3px;
+    background-color: black;
+    height: 100%; 
+    float: left;
+}
