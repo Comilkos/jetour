@@ -1,28 +1,153 @@
 * {
     font-family: Arial;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     display: flex;
+    justify-content: center;
+    color: #111;
 }
 
-.header {
-    display: flex;
-    height: 120px;
-}
-
-.logo {
-    
-}
-
-.logoKAN {
-    font-size: 30px;
-    font-weight: 600;
+.greenBtn {
+    border: 0px;
+    border-radius: 5px;
+    background: #68A598;
+    color: #fff;
 }
 
 .vertical-line {
-    width: 3px;
-    background-color: black;
-    height: 100%; 
+    background-color: #111;
     float: left;
+    height: clamp(10px, 5vw, 40px); 
+    width: 3px; 
+    margin: 0 30px;
+    margin-left: clamp(5px, 1vw, 30px);
+    margin-right: clamp(5px, 1vw, 30px);
+}
+
+/* start styles for header */
+.header {
+    display: flex;
+    height: clamp(50px, 10vw, 80px);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoJetour {
+    width: clamp(100px, 35vw, 200px);
+}
+
+.logoKAN {
+    font-size: clamp(12px,5vw, 30px);
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0 150px;
+}
+.menu > li {
+    margin: 0px 15px;
+}
+.menu > li > a {
+    color: #111;
+}
+.menu > li > a:hover {
+    color: #68A598;
+    transition: all 0.15s ease-out;
+}
+
+.contact {
+    display: flex;
+    font-size: clamp(12px, 3vw, 20px);
+    justify-content: center;
+    align-items: center;
+}
+.contact > .greenBtn {
+    margin-left: clamp(15px, 3vw, 30px);
+    height: clamp(25px, 5vw, 40px);
+    width: clamp(120px, 30vw, 200px);
+}
+
+/* end styles for header */
+
+@media (max-width: 375px)  {
+    .header {
+        display: inline;
+    }
+    .header > div {
+        justify-content: center;
+    }
+    .helloPage {
+        background-position-y:top;
+        background-size: 180%;
+    }
+    .titles > div:last-child {
+        display: block;
+        justify-content: start;
+        align-items: start;
+    }
+}
+
+
+
+
+
+/* start hello page */
+
+.helloPage {
+    background-image: url(./public/img/BG_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: clamp(330px, 5vw, 960px);
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+}
+.titles {
+    height: clamp(200px, 5vw, 350px);
+    width: 75%;
+}
+.titles > div {
+    height: 50%;
+}
+
+.titles > div:first-child {
+    display: flex;
+    align-items: end;
+}
+.titles > div:last-child {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.title {
+    font-size: clamp(24px, 5vw, 64px);
+    font-weight: 700;
+}
+
+.subtitleText {
+    font-size: clamp(12px, 3vw, 36px);
+    font-weight: 400;
+}
+.subtitle > div {
+    display: flex;
+    align-items: center;
+}
+.horizontal-line {
+    background-color: #fff;
+    float: left;
+    height: 2px
 }
