@@ -7,8 +7,45 @@
 
 
 .advantages {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    
     
 }
+    .advantagesText {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(40px, 5vw, 70px);
+    }
+        .advantagesTitle {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+        }
+            .advantagesTitle > p:last-child {
+                color: #68A598;
+                text-align: center;
+            }
+        .advantagesSubtitle {
+            font-size: clamp(12px, 3vw, 30px);
+            display: flex;
+            flex-direction: column;
+        }
+        .advantagesSubtitle > ul > li {
+            margin-bottom: 10px;
+        }
+    .advantagesImg {
+        
+        order: 0;
+    }
+        .advantagesImg > img {
+            width: clamp(320px, 50vw, 1000px);
+            /* margin-left: 100px; */
+    } 
+    @media (max-width: 100px) {}
 
 .contact {
     display: flex;
