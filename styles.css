@@ -9,6 +9,152 @@
     justify-content: center;
 }
 
+/* popup */
+
+.popup {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    max-width: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: 0.3s all;
+}
+
+.more_color_btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: #68A598;
+    border: 1px solid #2d2d2d; 
+}
+
+.popup__content {
+    display: flex;
+    flex-direction: column;
+}
+    .popup__content > div {
+        display: flex;
+    }
+    .more_car_card {
+        display: flex;
+
+    }
+        .more_car_img {
+            width: 65%;
+        }
+            .more_car_img > img {
+                width: 100%;
+                z-index: 0;
+            }
+        .more_car_subtitle {
+            width: 35%;
+            z-index: 1;
+        }
+
+
+
+
+.popup.active,
+.overlay-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+
+.popup-content {
+    padding: 30px;
+}
+
+.popup__title {
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.popup__form {
+    margin-top: 40px;
+    min-width: 300px;
+}
+
+.popup__item input,
+.popup__item textarea {
+    padding: 7px 10px;
+    border: 1px solid #DDD;
+    height: 40px;
+    border-radius: 5px;
+    -webkit-transition-property: border-color;
+    transition-property: border-color;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: cubic-bezier(.23, 1, .32, 1);
+    transition-timing-function: cubic-bezier(.23, 1, .32, 1);
+    font-size: 15px !important;
+    line-height: 155% !important;
+    font-weight: 300 !important;
+    color: #8787a2 !important;
+    width: 100%;
+    outline: 0;
+}
+
+.popup__item+.popup__item {
+    margin-top: 10px;
+}
+
+.overlay-modal {
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+.popup.active,
+.overlay-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+
+
+/* класс у body */
+.popup-opened {
+    overflow: hidden;
+}
+
+/* advantages */
+
 .advantages {
     width: 80%;
     display: flex;
@@ -43,7 +189,7 @@
         order: 1;
     }
         .advantagesImg > img {
-            width: clamp(400px, 50vw, 1000px);
+            width: clamp(400px, 50vw, 900px);
     } 
     @media (max-width: 750px) {
         .advantages {
@@ -76,12 +222,10 @@
             position: relative;
             left: -50px;
             width: 500px;
-            
         }  
         .advantagesImg {
             display: flex;
             align-items: center;
-            
         }
     }
    

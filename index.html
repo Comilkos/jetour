@@ -8,6 +8,64 @@
   </head>
 
   <body>
+
+    <!-- popup -->
+    <div class="btn">
+      <button id="more_dashing" onclick="more_dashing()" class="request-btn" data-main-modal="main">Подробнее 1</button>
+      <button id="more_x90plus" onclick="more_x90plus()" class="request-btn" data-main-modal="main">Подробнее 2</button>
+      <button id="more_x70plus" onclick="more_x70plus()" class="request-btn" data-main-modal="main">Подробнее 3</button>
+  </div>
+
+  
+  <div class="popup popup-main" id="dialog-content" data-modal="main">
+      <div class="popup-content">
+          <h2 class="popup__title"></h2>
+          <div class="popup__form form-main">
+              <div class="popup__content">
+                <div class="more_car_card">
+                  <div class="more_car_img">
+                    <img id="more_img" src="/public/DashingColors/JETOUR_black.png" alt="">
+                  </div>
+                  <div class="more_car_subtitle">
+                      <p>Lorem ipsum dolor sit amet,
+                        consectetuer adipiscing elit, 
+                        sed diam nonummy nibh 
+                        euismod tincidunt ut laoreet 
+                        dolore magna aliquam erat 
+                        volutpat. Ut wisi enim ad minim
+                        veniam, quis nostrud exerci 
+                        tation ullamcorper suscipit 
+                        lobortis nisl ut aliquip ex ea 
+                        commodo consequat. </p>
+                  </div>
+                </div>
+                <div class="more_buttons">
+                  <div class="popup__item">
+                      <button class="more_color_btn" data-color="JETOUR_black" onclick="imgChange(dataset.color)"></button>
+                      <button class="more_color_btn" data-color="JETOUR_blue" onclick="imgChange(dataset.color)"></button>
+                      <button class="more_color_btn" data-color="JETOUR_grey" onclick="imgChange(dataset.color)"></button>
+                      <button class="more_color_btn" data-color="JETOUR_red" onclick="imgChange(dataset.color)"></button>
+                      <button class="more_color_btn" data-color="JETOUR_white" onclick="imgChange(dataset.color)"></button>
+                  </div>
+                  <div class="popup__item">
+                     
+                  </div>
+                </div> 
+              </div>
+
+              <div class="btn btn_popup">
+                  <button type="submit">Отправить</button>
+              </div>
+            </div>
+          <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                  d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+          </svg>
+      </div>
+  </div>
+  <div class="overlay-modal" id="overlay-modal"></div>
+
+
     <!-- header-->
     <div class="container">
       <div class="advantages">
@@ -85,11 +143,26 @@
       </footer>
     </div>
 
+    <script src="/main.js"></script>
     <script>
-      // if (document.documentElement.clientWidth < 1920) {
-      //     document.getElementsByClassName('horizontal-line')[0].outerHTML = '';
-      //     document.getElementsByClassName('horizontal-line')[0].outerHTML = '';
-      // }
+      function imgChange(color) {
+        document.getElementById('more_img').setAttribute('src', '/public/DashingColors/'+color+'.png')
+      }
+      function more_dashing() {
+        document.getElementsByClassName('popup__title')[0].innerHTML = 'DASHING';
+
+      }
+      function more_x90plus() {
+        document.getElementsByClassName('popup__title')[0].innerHTML = 'X90 PLUS';
+
+      }
+      function more_x70plus() {
+        document.getElementsByClassName('popup__title')[0].innerHTML = 'X70 PLUS';
+
+      }
+
+
     </script>
+    
   </body>
 </html>
